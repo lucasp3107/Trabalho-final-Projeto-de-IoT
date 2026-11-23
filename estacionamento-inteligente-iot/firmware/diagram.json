@@ -1,0 +1,248 @@
+{
+  "version": 1,
+  "author": "Grupo FAG T04N",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-esp32-devkit-v1",
+      "id": "esp",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-hc-sr04",
+      "id": "ultra1",
+      "top": -140,
+      "left": -260,
+      "attrs": {
+        "distance": "100"
+      }
+    },
+    {
+      "type": "wokwi-rgb-led",
+      "id": "rgb1",
+      "top": -60,
+      "left": -250,
+      "attrs": {
+        "common": "cathode"
+      }
+    },
+    {
+      "type": "wokwi-hc-sr04",
+      "id": "ultra2",
+      "top": -140,
+      "left": -70,
+      "attrs": {
+        "distance": "100"
+      }
+    },
+    {
+      "type": "wokwi-rgb-led",
+      "id": "rgb2",
+      "top": -60,
+      "left": -60,
+      "attrs": {
+        "common": "cathode"
+      }
+    },
+    {
+      "type": "wokwi-hc-sr04",
+      "id": "ultra3",
+      "top": -140,
+      "left": 120,
+      "attrs": {
+        "distance": "100"
+      }
+    },
+    {
+      "type": "wokwi-rgb-led",
+      "id": "rgb3",
+      "top": -60,
+      "left": 130,
+      "attrs": {
+        "common": "cathode"
+      }
+    },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd1",
+      "top": -300,
+      "left": -40,
+      "attrs": {
+        "pins": "i2c"
+      }
+    }
+  ],
+  "connections": [
+    [
+      "esp:VIN",
+      "ultra1:VCC",
+      "red",
+      []
+    ],
+    [
+      "esp:GND.1",
+      "ultra1:GND",
+      "black",
+      []
+    ],
+    [
+      "esp:D5",
+      "ultra1:TRIG",
+      "green",
+      []
+    ],
+    [
+      "esp:D18",
+      "ultra1:ECHO",
+      "blue",
+      []
+    ],
+    [
+      "esp:D13",
+      "rgb1:R",
+      "red",
+      []
+    ],
+    [
+      "esp:D14",
+      "rgb1:G",
+      "green",
+      []
+    ],
+    [
+      "esp:D15",
+      "rgb1:B",
+      "blue",
+      []
+    ],
+    [
+      "esp:GND.1",
+      "rgb1:COM",
+      "black",
+      []
+    ],
+    [
+      "esp:VIN",
+      "ultra2:VCC",
+      "red",
+      []
+    ],
+    [
+      "esp:GND.1",
+      "ultra2:GND",
+      "black",
+      []
+    ],
+    [
+      "esp:D19",
+      "ultra2:TRIG",
+      "green",
+      []
+    ],
+    [
+      "esp:TX2",
+      "ultra2:ECHO",
+      "blue",
+      []
+    ],
+    [
+      "esp:D27",
+      "rgb2:R",
+      "red",
+      []
+    ],
+    [
+      "esp:D26",
+      "rgb2:G",
+      "green",
+      []
+    ],
+    [
+      "esp:D25",
+      "rgb2:B",
+      "blue",
+      []
+    ],
+    [
+      "esp:GND.1",
+      "rgb2:COM",
+      "black",
+      []
+    ],
+    [
+      "esp:VIN",
+      "ultra3:VCC",
+      "red",
+      []
+    ],
+    [
+      "esp:GND.1",
+      "ultra3:GND",
+      "black",
+      []
+    ],
+    [
+      "esp:RX2",
+      "ultra3:TRIG",
+      "green",
+      []
+    ],
+    [
+      "esp:D23",
+      "ultra3:ECHO",
+      "blue",
+      []
+    ],
+    [
+      "esp:D33",
+      "rgb3:R",
+      "red",
+      []
+    ],
+    [
+      "esp:D32",
+      "rgb3:G",
+      "green",
+      []
+    ],
+    [
+      "esp:D4",
+      "rgb3:B",
+      "blue",
+      []
+    ],
+    [
+      "esp:GND.1",
+      "rgb3:COM",
+      "black",
+      []
+    ],
+    [
+      "esp:GND.1",
+      "lcd1:GND",
+      "black",
+      []
+    ],
+    [
+      "esp:VIN",
+      "lcd1:VCC",
+      "red",
+      []
+    ],
+    [
+      "esp:D21",
+      "lcd1:SDA",
+      "purple",
+      []
+    ],
+    [
+      "esp:D22",
+      "lcd1:SCL",
+      "orange",
+      []
+    ]
+  ],
+  "dependencies": {}
+}
