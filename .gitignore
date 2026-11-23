@@ -1,0 +1,11 @@
+# Credenciais (NUNCA versionar)
+secrets.h
+*.env
+.env
+# Node-RED: credenciais do broker ficam fora do repositorio
+flows_cred.json
+# Sistema/editores
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
